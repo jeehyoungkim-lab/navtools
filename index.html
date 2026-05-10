@@ -1,17 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>내 홈페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 홈페이지</title>
     <style>
-        /* HTML <details> 태그를 활용한 간단한 아코디언 스타일 */
-        details { margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px; }
-        summary { padding: 15px; background-color: #f8f9fa; cursor: pointer; font-weight: bold; }
-        .content { padding: 15px; }
+        /* 모바일에서 보기 편한 기본 설정 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 20px;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        h1 { text-align: center; color: #333; margin-bottom: 30px; }
+
+        /* 글 상자 스타일 */
+        details {
+            background: #fff;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e1e4e8;
+        }
+
+        /* 가로로 긴 클릭 부분 */
+        summary {
+            padding: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none; /* 화살표 숨기기 */
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 클릭했을 때 디자인 변경 */
+        details[open] summary {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 내용이 나타나는 부분 */
+        .content {
+            padding: 18px;
+            line-height: 1.6;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        /* 화살표 모양 대신 간단한 표시 추가 (선택사항) */
+        summary::after { content: '▼'; font-size: 0.8em; color: #aaa; }
+        details[open] summary::after { content: '▲'; }
     </style>
 </head>
 <body>
-    <h1>나의 작은 홈페이지</h1>
-    <details><summary>첫 번째 글 상자</summary><div class="content">내용입니다.</div></details>
+
+    <h1>📋 나의 리스트</h1>
+
+    <!-- 글 상자 10개 반복 시작 -->
+<!-- 큰 상자 시작 -->
+    <details class="parent">
+        <summary>1. 큰 제목 (클릭해 보세요)</summary>
+        <div class="content">
+            <p>여기는 큰 상자의 일반 설명입니다.</p>
+            
+            <!-- 하위(중첩) 상자 1 -->
+            <details class="child">
+                <summary>ㄴ 하위 메뉴 A (들여쓰기 됨)</summary>
+                <div class="content">
+                    상세한 하위 내용 A입니다.
+                </div>
+            </details>
+    
+            <!-- 하위(중첩) 상자 2 -->
+            <details class="child">
+                <summary>ㄴ 하위 메뉴 B</summary>
+                <div class="content">
+                    상세한 하위 내용 B입니다.
+                </div>
+            </details>
+        </div>
+    </details>
+
+
+    <details>
+        <summary>2. 두 번째 제목을 입력하세요</summary>
+        <div class="content">두 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>3. 세 번째 제목을 입력하세요</summary>
+        <div class="content">세 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>4. 네 번째 제목을 입력하세요</summary>
+        <div class="content">네 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>5. 다섯 번째 제목을 입력하세요</summary>
+        <div class="content">다섯 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>6. 여섯 번째 제목을 입력하세요</summary>
+        <div class="content">여섯 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>7. 일곱 번째 제목을 입력하세요</summary>
+        <div class="content">일곱 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>8. 여덟 번째 제목을 입력하세요</summary>
+        <div class="content">여덟 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>9. 아홉 번째 제목을 입력하세요</summary>
+        <div class="content">아홉 번째 상자의 상세 내용입니다.</div>
+    </details>
+
+    <details>
+        <summary>10. 열 번째 제목을 입력하세요</summary>
+        <div class="content">열 번째 상자의 상세 내용입니다.</div>
+    </details>
+    <!-- 글 상자 10개 반복 끝 -->
+
 </body>
 </html>
