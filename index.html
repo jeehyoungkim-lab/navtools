@@ -5,36 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 홈페이지</title>
         <style>
-          /* 글 상자 전체 간격 줄이기 */
+          /* 전체 기본 설정 */
+          body { padding: 10px; font-size: 14px; }
+        
+          /* 모든 상자의 세로 간격을 최소화 */
           details {
-            margin-bottom: 5px; /* 상자 사이의 간격을 12px에서 5px로 축소 */
-            border-radius: 4px; /* 테두리를 조금 더 각지게 해서 날카로운 느낌으로 */
+            margin-bottom: 2px !important; 
+            padding: 0;
           }
         
-          /* 클릭하는 부분(제목)을 납작하게 */
+          /* 클릭하는 부분 디자인 */
           summary {
-            padding: 8px 12px;  /* 위아래 여백을 18px에서 8px로 대폭 축소 */
-            font-size: 0.9rem;  /* 글자 크기를 살짝 줄임 */
-            /* 내용이 길어도 한 줄로 나오게 하고 싶다면 아래 추가 (선택사항) */
-            white-space: nowrap; 
-            overflow: hidden;
-            text-overflow: ellipsis;
+            padding: 10px;
+            background-color: #fff;
+            cursor: pointer;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            font-weight: bold;
+            list-style: none;
           }
         
-          /* 하위(중첩) 상자는 더 납작하게 */
-          details.child summary {
-            padding: 5px 12px;  /* 하위 메뉴는 더 얇게 */
-            font-size: 0.85rem;
+          /* 하위 메뉴의 들여쓰기를 대폭 줄임 (폭 확보) */
+          details.child {
+            margin-left: 12px; /* 20px -> 12px로 축소 */
+            margin-top: 2px;
           }
         
-          /* 내용 부분 여백도 조정 */
+          /* 핵심: 내용 박스 설정 */
           .content {
-            padding: 10px 12px;
-            font-size: 0.85rem;
-            line-height: 1.4;   /* 줄 간격을 좁혀서 더 촘촘하게 */
-            white-space: pre-wrap; /* 지난번에 말씀드린 엔터 인식 설정 */
+            padding: 10px 5px; /* 옆구리 여백을 거의 없앰 */
+            white-space: normal; /* 상자 안의 빈 공간(엔터) 무시 */
+          }
+        
+          /* 실제 글자(성경 구절 등)가 들어가는 부분만 줄바꿈 허용 */
+          .inner-text {
+            display: block;
+            white-space: pre-wrap; /* 여기서만 엔터 인식 */
+            line-height: 1.6;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.95rem;
           }
         </style>
+
 
 </head>
 <body>
