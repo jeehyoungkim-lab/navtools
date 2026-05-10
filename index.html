@@ -38,15 +38,15 @@
           }
         
           /* 실제 글자(성경 구절 등)가 들어가는 부분만 줄바꿈 허용 */
-          .inner-text {
-            display: block;
-            white-space: pre-wrap; /* 여기서만 엔터 인식 */
-            line-height: 1.6;
-            background: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 0.95rem;
-          }
+            .inner-text {
+                display: block;
+                white-space: normal; /* 코드상의 엔터는 무시하고 <br>만 인식하게 함 */
+                line-height: 1.6;
+                background: #f9f9f9;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 0.95rem;
+            }
         </style>
 
 
